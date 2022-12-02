@@ -6,7 +6,7 @@ The app uses http://ws2.aptoide.com/api/6/bulkRequest/api_list/listApps API to f
 
 ### Screenshots:
 <p float="left">
-  <img src="https://cdn.discordapp.com/attachments/556488478594957333/1048184009848528946/image.png" width="250">
+  <img src="https://cdn.discordapp.com/attachments/556488478594957333/1048191942506332210/image.png" width="250">
   <img src="https://cdn.discordapp.com/attachments/556488478594957333/1048184137728675900/image.png" width="250">
 </p>
 
