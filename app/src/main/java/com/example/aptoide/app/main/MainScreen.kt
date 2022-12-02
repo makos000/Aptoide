@@ -138,7 +138,7 @@ fun MainScreen(viewModel: MainViewModel, navController: NavController) {
                                     elevation = 0.dp,
                                     shape = RoundedCornerShape(10.dp)
                                 ) {
-                                    Image(painter = rememberAsyncImagePainter(model = item.graphic),
+                                    Image(painter = rememberAsyncImagePainter(model = item.icon),
                                         contentDescription = "App Icon Image",
                                         modifier = Modifier.size(width = 90.dp, height = 90.dp),
                                         contentScale = ContentScale.Crop)
