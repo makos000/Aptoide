@@ -6,8 +6,8 @@ The app uses http://ws2.aptoide.com/api/6/bulkRequest/api_list/listApps API to f
 
 ### Screenshots:
 
-![github-small](https://cdn.discordapp.com/attachments/556488478594957333/1048184009848528946/image.png)
-![github-small](https://cdn.discordapp.com/attachments/556488478594957333/1048184137728675900/image.png)
+![github-small](https://cdn.discordapp.com/attachments/556488478594957333/1048184009848528946/image.png | width=100px)
+![github-small](https://cdn.discordapp.com/attachments/556488478594957333/1048184137728675900/image.png | width=100px)
 
 ### Features:
 - Main Screen listing the apps in 2 tabs (Editors choice and Top apps)
