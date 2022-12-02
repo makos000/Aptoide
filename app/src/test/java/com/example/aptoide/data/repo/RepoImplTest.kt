@@ -5,27 +5,26 @@ import com.example.aptoide.data.remote.remoteds.RemoteDSImpl
 import com.example.aptoide.domain.model.Parameters
 import com.example.aptoide.util.Resource
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
-import org.checkerframework.checker.units.qual.A
-import org.junit.Assert.*
-
 import org.junit.After
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
 import org.mockito.MockitoAnnotations
 import org.mockito.kotlin.whenever
-import retrofit2.Response
 
 class RepoImplTest {
 
     private lateinit var fakeRepo: FakeRepo
+    @OptIn(ExperimentalCoroutinesApi::class)
     private val testDispatcher = StandardTestDispatcher()
 
-    val model = Parameters("",0,"", "",
+    private val model = Parameters("",0,"", "",
         0,"","","","",0,
         0.0, 0,"","","",
         0,"")
@@ -33,6 +32,7 @@ class RepoImplTest {
     @Mock
     private lateinit var remote: RemoteDSImpl
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Before
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
@@ -40,6 +40,7 @@ class RepoImplTest {
         fakeRepo = FakeRepo(remote)
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @After
     fun tearDown() {
         Dispatchers.resetMain()

@@ -14,9 +14,8 @@ class RepoImpl @Inject constructor(val remote: RemoteDSInterface, val local: Loc
     RepoInterface {
     override suspend fun getApps(): Flow<Resource<List<AppEntity>>> = flow {
         emit(Resource.Loading())
-        readAppsfromDB().collect { data ->
-
-                val response = getAppsFromApi()
+        readAppsfromDB().collect {
+            val response = getAppsFromApi()
                 if (response is Resource.Success){
                     nukeTable()
                     insertAppsToDB(AppEntity(response.data!!))

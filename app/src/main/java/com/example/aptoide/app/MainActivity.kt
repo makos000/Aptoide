@@ -8,7 +8,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.unit.dp
@@ -20,15 +19,12 @@ import com.example.aptoide.app.detail.DetailScreen
 import com.example.aptoide.app.main.MainScreen
 import com.example.aptoide.app.ui.theme.AptoideTheme
 import com.example.aptoide.app.ui.theme.CustomColors
-
-import androidx.compose.ui.layout.ContentScale
 import dagger.hilt.android.AndroidEntryPoint
 
-@OptIn(ExperimentalMaterialApi::class)
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    val viewModel by viewModels<MainViewModel>()
+    private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     //the app layout is sorted here vertically from top to bottom in this Column
-                    Column() {
+                    Column {
 
                         //Empty TopAppBar with the orange color gradient
                         TopAppBar(modifier = Modifier

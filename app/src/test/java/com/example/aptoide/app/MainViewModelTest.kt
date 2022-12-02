@@ -29,7 +29,7 @@ class MainViewModelTest{
     private lateinit var viewModel: MainViewModel
     private lateinit var fakeRepo: FakeRepo
 
-    val model = Parameters("",0,"", "",
+    private val model = Parameters("",0,"", "",
         0,"","","","",0,
         0.0, 0,"","","",
         0,"")
@@ -46,6 +46,7 @@ class MainViewModelTest{
     @Mock
     private lateinit var api: ApiInterface
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Before
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
@@ -55,6 +56,7 @@ class MainViewModelTest{
 
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @After
     fun tearDown() {
         Dispatchers.resetMain()

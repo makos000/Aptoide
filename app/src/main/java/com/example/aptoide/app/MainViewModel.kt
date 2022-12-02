@@ -18,8 +18,6 @@ class MainViewModel @Inject constructor(private val repository: RepoInterface): 
     private var _data: MutableStateFlow<Resource<List<AppEntity>>> = MutableStateFlow(Resource.Loading())
     var data: StateFlow<Resource<List<AppEntity>>> = _data
 
-    var apiResponse = listOf<Parameters>()
-
     var app = Parameters("",0,"", "",
         0,"","","","",0,
         0.0, 0,"","","",
@@ -27,7 +25,7 @@ class MainViewModel @Inject constructor(private val repository: RepoInterface): 
 
     fun getData(){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.getApps().collect(){
+            repository.getApps().collect {
                 _data.value = it
             }
         }
